@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6576ff;
+  --secondary: #ffbb5a;
+  --foreground: #364a63;
+  --mutedforeground: #8091a7;
+  --pPurple: #816bff;
+  --pCyan: #1fcec9;
+  --pBlue: #4b97d3;
+  --pBlack: #3b4747;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+}
+
+.color-tag {
+  @apply block size-5 cursor-pointer rounded-full ring-primary shadow-sm has-[:checked]:ring-2 has-[:checked]:ring-offset-2;
+}

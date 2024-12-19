@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Softnio</title>
+  </head>
+  <body
+    class="antialiased h-full w-full font-roboto bg-gray-50 text-foreground"
+  >
+    <main
+      id="app"
+      class="w-full h-full min-h-screen relative grid place-content-center px-4 py-10"
+    >
+      <div
+        class="max-w-7xl h-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 w-full"
+      >
+        <div
+          class="w-full h-full aspect-[0.8] lg:h-auto lg:aspect-[0.9] xl:aspect-[1.05] relative rounded-lg overflow-hidden"
+        >
+          <img
+            src="/purple.jpg"
+            alt="purple smart watch"
+            data-image="purple"
+            class="slider-img h-full absolute transition-opacity duration-300 ease-in-out w-full object-cover"
+          />
+          <img
+            src="/cyan.jpg"
+            alt="cyan smart watch"
+            data-image="cyan"
+            class="slider-img h-full absolute opacity-0 transition-opacity duration-300 ease-in-out w-full object-cover"
+          />
+          <img
+            src="/blue.jpg"
+            alt="blue smart watch"
+            data-image="blue"
+            class="slider-img h-full absolute opacity-0 transition-opacity duration-300 ease-in-out w-full object-cover"
+          />
+          <img
+            src="/black.jpg"
+            alt="black smart watch"
+            data-image="black"
+            class="slider-img h-full absolute opacity-0 transition-opacity duration-300 ease-in-out w-full object-cover"
+          />
+        </div>
+        <div class="space-y-4">
+          <!-- title -->
+          <h1 class="text-2xl lg:text-3xl xl:text-4xl font-bold">
+            Classy Modern Smart watch
+          </h1>
+          <!-- stars -->
+          <div class="flex items-center gap-2">
+            <div id="stars" class="flex gap-1 items-center"></div>
+            <p class="text-mutedforeground">(2 Reviews)</p>
+          </div>
+          <!-- price -->
+          <div class="text-xl lg:text-2xl space-x-1">
+            <span
+              id="price"
+              class="text-sm lg:text-xl text-mutedforeground line-through"
+              >$99.00</span
+            >
+            <span
+              id="discountedPrice"
+              class="text-primary font-bold max-w-prose"
+              >$79.00</span
+            >
+          </div>
+          <!-- description -->
+          <div>
+            <p class="lg:text-lg text-mutedforeground">
+              I must explain to you how all this mistaken idea of denoun cing
+              ple praising pain was born and I will give you a complete account
+              of the system, and expound the actual teaching.
+            </p>
+          </div>
+          <!-- config -->
+          <div class="flex gap-4">
+            <div>
+              <p class="text-sm text-mutedforeground">Type</p>
+              <p class="font-semibold">Watch</p>
+            </div>
+            <div>
+              <p class="text-sm text-mutedforeground">Model Number</p>
+              <p class="font-semibold">Forerunner 290XT</p>
+            </div>
+          </div>
+          <!-- colors -->
+          <div>
+            <p class="font-semibold">Band Color</p>
+            <div id="bandColorsContainer" class="mt-2 flex gap-2"></div>
+          </div>
+          <!-- sizes -->
+          <div>
+            <p class="font-semibold">Wrist Size</p>
+            <div id="sizes-container" class="mt-1 flex gap-2"></div>
+          </div>
+          <!-- actions -->
+          <div class="flex items-center gap-2">
+            <div>
+              <div>
+                <label for="Quantity" class="sr-only">Quantity</label>
+                <div class="flex items-center rounded border border-gray-200">
+                  <button
+                    type="button"
+                    aria-label="decrease-quantity"
+                    class="size-10 leading-10 border-r text-gray-600 transition hover:opacity-75"
+                  >
+                    &minus;
+                  </button>
+                  <input
+                    type="number"
+                    id="Quantity"
+                    value="1"
+                    disabled
+                    class="h-10 w-10 border-transparent text-center [-moz-appearance:_textfield] sm:text-sm [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+                  />
+
+                  <button
+                    type="button"
+                    aria-label="increase-quantity"
+                    class="size-10 border-l leading-10 text-gray-600 transition hover:opacity-75"
+                  >
+                    &plus;
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <button
+                id="add-to-cart-button"
+                class="inline-block rounded bg-primary px-4 py-2.5 text-sm font-medium text-white transition focus:outline-none focus:ring hover:bg-primary/80"
+              >
+                Add to Cart
+              </button>
+            </div>
+            <div
+              id="heart-svg"
+              class="cursor-pointer relative text-primary flex justify-center items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        id="checkout-button"
+        class="fixed flex transition-all ease-in-out duration-300 opacity-0 items-center gap-2 bottom-4 left-1/2 -translate-x-1/2 bg-secondary px-4 py-2 font-semibold rounded-lg"
+      >
+        <span>Checkout</span>
+        <span class="quantity bg-gray-50 rounded-lg px-2 py-1 text-xs">2</span>
+      </button>
+      <div
+        id="cart-overlay"
+        class="bg-black/40 flex opacity-0 transition-opacity ease-in-out duration-300 pointer-events-none fixed inset-0 h-full w-full justify-center items-center px-4"
+      >
+        <div
+          id="cart-container"
+          class="w-full transition-all duration-300 ease-in-out max-w-3xl bg-gray-50 rounded-xl h-auto mx-auto p-6 lg:p-10"
+        >
+          <h3 class="text-2xl font-semibold mb-4">Your Cart</h3>
+          <div class="w-full overflow-x-auto">
+            <table class="w-full text-center">
+              <thead class="">
+                <tr class="border-b text-mutedforeground">
+                  <th class="py-2 pr-2 font-normal text-left">Item</th>
+                  <th class="py-2 px-2 font-normal">Color</th>
+                  <th class="py-2 px-2 font-normal">Size</th>
+                  <th class="py-2 px-2 font-normal">Qnt</th>
+                  <th class="py-2 pl-2 font-normal text-right">Price</th>
+                </tr>
+              </thead>
+              <tbody id="cart-table-body" class="text-foreground"></tbody>
+            </table>
+          </div>
+          <div class="flex pt-4 items-center gap-2 justify-end w-full">
+            <button
+              class="inline-block rounded bg-gray-50 border px-4 py-2.5 text-sm font-medium transition focus:outline-none focus:ring hover:bg-gray-100"
+            >
+              Continue Shopping
+            </button>
+            <button
+              class="inline-block rounded bg-primary px-4 py-2.5 text-sm font-medium text-white transition focus:outline-none focus:ring hover:bg-primary/80"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
